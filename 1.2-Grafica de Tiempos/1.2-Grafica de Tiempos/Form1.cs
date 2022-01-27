@@ -869,7 +869,7 @@ namespace _1._2_Grafica_de_Tiempos
                         break;
                     case "109":
                         imagen = new Bitmap(Properties.Resources.Tiempo);
-                        gMarker = GMarkerGoogleType.green;
+                        gMarker = GMarkerGoogleType.green_dot;
                         break;
                     case "250":
                         imagen = new Bitmap(Properties.Resources.Tiempo);
