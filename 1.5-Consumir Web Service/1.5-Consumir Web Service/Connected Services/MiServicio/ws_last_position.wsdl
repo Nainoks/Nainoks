@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://bu01.utraxweb.com/WS/utrax.ws_last_position/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://bu01.utraxweb.com/WS/utrax.ws_last_position/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://bu01.utraxweb.com/WS/utrax.ws_last_position/">
+      <s:element name="GetLastPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Page" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastPositionResult" type="tns:ArrayOfInfoLastPosition" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInfoLastPosition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InfoLastPosition" type="tns:InfoLastPosition" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InfoLastPosition">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="eCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plates" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Device_Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Instance_Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Evento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTime_GPS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Speed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Course" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Orientation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLastPosition_02">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Page" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastPosition_02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastPosition_02Result" type="tns:ArrayOfInfoLastPosition_02" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInfoLastPosition_02">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InfoLastPosition_02" type="tns:InfoLastPosition_02" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InfoLastPosition_02">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="eCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plates" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Device_Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Instance_Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Evento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateTime_GPS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Speed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Course" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Orientation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Odometer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ignition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reference" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLastPosition_03">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Page" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastPosition_03Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastPosition_03Result" type="tns:ArrayOfInfoLastPosition_02" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfInfoLastPosition" nillable="true" type="tns:ArrayOfInfoLastPosition" />
+      <s:element name="ArrayOfInfoLastPosition_02" nillable="true" type="tns:ArrayOfInfoLastPosition_02" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLastPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_02SoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastPosition_02" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_02SoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastPosition_02Response" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_03SoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastPosition_03" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_03SoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastPosition_03Response" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPositionHttpGetIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="Page" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPositionHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInfoLastPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_02HttpGetIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="Page" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_02HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInfoLastPosition_02" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_03HttpGetIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="Page" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_03HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInfoLastPosition_02" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPositionHttpPostIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="Page" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPositionHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInfoLastPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_02HttpPostIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="Page" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_02HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInfoLastPosition_02" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_03HttpPostIn">
+    <wsdl:part name="User" type="s:string" />
+    <wsdl:part name="Password" type="s:string" />
+    <wsdl:part name="Page" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLastPosition_03HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfInfoLastPosition_02" />
+  </wsdl:message>
+  <wsdl:portType name="ws_last_positionSoap">
+    <wsdl:operation name="GetLastPosition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_01</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPositionSoapIn" />
+      <wsdl:output message="tns:GetLastPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_02</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPosition_02SoapIn" />
+      <wsdl:output message="tns:GetLastPosition_02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_03">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_03</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPosition_03SoapIn" />
+      <wsdl:output message="tns:GetLastPosition_03SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ws_last_positionHttpGet">
+    <wsdl:operation name="GetLastPosition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_01</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPositionHttpGetIn" />
+      <wsdl:output message="tns:GetLastPositionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_02</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPosition_02HttpGetIn" />
+      <wsdl:output message="tns:GetLastPosition_02HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_03">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_03</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPosition_03HttpGetIn" />
+      <wsdl:output message="tns:GetLastPosition_03HttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ws_last_positionHttpPost">
+    <wsdl:operation name="GetLastPosition">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_01</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPositionHttpPostIn" />
+      <wsdl:output message="tns:GetLastPositionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_02">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_02</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPosition_02HttpPostIn" />
+      <wsdl:output message="tns:GetLastPosition_02HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_03">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Method_03</wsdl:documentation>
+      <wsdl:input message="tns:GetLastPosition_03HttpPostIn" />
+      <wsdl:output message="tns:GetLastPosition_03HttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_last_positionSoap" type="tns:ws_last_positionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLastPosition">
+      <soap:operation soapAction="http://bu01.utraxweb.com/WS/utrax.ws_last_position/GetLastPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_02">
+      <soap:operation soapAction="http://bu01.utraxweb.com/WS/utrax.ws_last_position/GetLastPosition_02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_03">
+      <soap:operation soapAction="http://bu01.utraxweb.com/WS/utrax.ws_last_position/GetLastPosition_03" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_last_positionSoap12" type="tns:ws_last_positionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLastPosition">
+      <soap12:operation soapAction="http://bu01.utraxweb.com/WS/utrax.ws_last_position/GetLastPosition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_02">
+      <soap12:operation soapAction="http://bu01.utraxweb.com/WS/utrax.ws_last_position/GetLastPosition_02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_03">
+      <soap12:operation soapAction="http://bu01.utraxweb.com/WS/utrax.ws_last_position/GetLastPosition_03" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_last_positionHttpGet" type="tns:ws_last_positionHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetLastPosition">
+      <http:operation location="/GetLastPosition" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_02">
+      <http:operation location="/GetLastPosition_02" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_03">
+      <http:operation location="/GetLastPosition_03" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_last_positionHttpPost" type="tns:ws_last_positionHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetLastPosition">
+      <http:operation location="/GetLastPosition" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_02">
+      <http:operation location="/GetLastPosition_02" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastPosition_03">
+      <http:operation location="/GetLastPosition_03" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_last_position">
+    <wsdl:port name="ws_last_positionSoap" binding="tns:ws_last_positionSoap">
+      <soap:address location="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_last_positionSoap12" binding="tns:ws_last_positionSoap12">
+      <soap12:address location="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_last_positionHttpGet" binding="tns:ws_last_positionHttpGet">
+      <http:address location="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_last_positionHttpPost" binding="tns:ws_last_positionHttpPost">
+      <http:address location="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

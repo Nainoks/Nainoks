@@ -1,0 +1,11 @@
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\Debug\1.5-Consumir Web Service.exe.config
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\Debug\1.5-Consumir Web Service.exe
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\Debug\1.5-Consumir Web Service.pdb
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\1.5-Consumir Web Service.csproj.AssemblyReference.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\1.5-Consumir Web Service.csproj.SuggestedBindingRedirects.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\_1._5_Consumir_Web_Service.frmVista.resources
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\_1._5_Consumir_Web_Service.Properties.Resources.resources
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\1.5-Consumir Web Service.csproj.GenerateResource.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\1.5-Consumir Web Service.csproj.CoreCompileInputs.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\1.5-Consumir Web Service.exe
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\Debug\1.5-Consumir Web Service.pdb

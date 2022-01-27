@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx?wsdl" docRef="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx" xmlns:q1="http://bu01.utraxweb.com/WS/utrax.ws_last_position/" binding="q1:ws_last_positionSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://bu01.utraxweb.com/ws/ws_Last_Positions/ws_last_position.asmx" xmlns:q2="http://bu01.utraxweb.com/WS/utrax.ws_last_position/" binding="q2:ws_last_positionSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
