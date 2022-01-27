@@ -1,0 +1,11 @@
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\bin\x86\Debug\1.1-Analizador Excel.exe.config
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\bin\x86\Debug\1.1-Analizador Excel.exe
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\bin\x86\Debug\1.1-Analizador Excel.pdb
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\1.1-Analizador Excel.csproj.AssemblyReference.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\1.1-Analizador Excel.csproj.SuggestedBindingRedirects.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\_1._1_Analizador_Excel.frmVista.resources
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\_1._1_Analizador_Excel.Properties.Resources.resources
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\1.1-Analizador Excel.csproj.GenerateResource.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\1.1-Analizador Excel.csproj.CoreCompileInputs.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\1.1-Analizador Excel.exe
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x86\Debug\1.1-Analizador Excel.pdb
