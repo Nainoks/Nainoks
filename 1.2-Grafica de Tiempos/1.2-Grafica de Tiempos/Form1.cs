@@ -1,4 +1,8 @@
-﻿using System;
+﻿using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
@@ -40,6 +44,8 @@ namespace _1._2_Grafica_de_Tiempos
             lstEventos.Add(new Evento("Evento/Jamming detectado", "J", "204", Brushes.DarkRed, Brushes.White, 4));
             lstEventos.Add(new Evento("Bloquear Motor", "B", "005", Brushes.PaleVioletRed, Brushes.Red, 4)); 
             lstEventos.Add(new Evento("Butón de Pánico", "P", "017", Brushes.Red, Brushes.White, 4));
+
+            mapControl.MapProvider = GMapProviders.GoogleMap;
 
             foreach (var evento in lstEventos)
             {
@@ -164,6 +170,8 @@ namespace _1._2_Grafica_de_Tiempos
                         chbMostrarTodo.Enabled = true;
                         btnAnteriorDia.Enabled = true;
                         btnSiguienteDia.Enabled = true;
+                        btnSiguienteDia.Enabled = true;
+                        
                         chbMostrarTodo_CheckedChanged(sender,e);
                     }
                     catch (Exception ex)
@@ -205,7 +213,7 @@ namespace _1._2_Grafica_de_Tiempos
 
         private void dtpSelector_CloseUp(object sender, EventArgs e)
         {
-            tpgLienzo1.Invalidate();
+            tpgGrafica24.Invalidate();
             lstIconos.Clear();
             if (dtExcel.AsEnumerable().Where(row => (row.Field<DateTime>("F11").Date == dtpSelector.Value.Date)).Count() != 0)
                 dtDia = dtExcel.AsEnumerable().Where(row => (row.Field<DateTime>("F11").Date == dtpSelector.Value.Date)).CopyToDataTable<DataRow>();
@@ -225,6 +233,7 @@ namespace _1._2_Grafica_de_Tiempos
                 btnSiguienteDia.Enabled = true;
 
             CargarDatos();
+            MarcarMapa();
         }
 
         private void btnAnteriorDia_Click(object sender, EventArgs e)
@@ -254,10 +263,10 @@ namespace _1._2_Grafica_de_Tiempos
 
         private void btnGraficar_Click(object sender, EventArgs e)
         {
-            tpgLienzo1.Invalidate();
+            tpgGrafica24.Invalidate();
             lstIconos.Clear();
             CargarDatos();
-
+            MarcarMapa();
         }
         private void tpgLienzo1_Resize(object sender, EventArgs e)
         {
@@ -281,12 +290,9 @@ namespace _1._2_Grafica_de_Tiempos
             DateTime dateTime;
             DateTime dt = dtpSelector.Value;
             IEnumerable<DataRow> selectedRows= dtExcel.AsEnumerable().Where(row => (row.Field<DateTime>("F11").Date == dt.Date));
-
-            foreach (DataRow row in selectedRows) {
-                
-                dateTime = row.Field<DateTime>("F11");
-
-  
+            foreach (DataRow row in selectedRows) 
+            {                
+                dateTime = row.Field<DateTime>("F11");                  
                 foreach (var evento in lstEventosCheckBox)
                 {
                     foreach (var levento in lstEventos)
@@ -295,19 +301,15 @@ namespace _1._2_Grafica_de_Tiempos
                         {
                             if (row["F14"].ToString() == levento.Codigo)
                             {
-                                GuardarPunto(dateTime, levento, lstEventosCheckBox.IndexOf(evento));
+                                GuardarPunto(dateTime, levento, lstEventosCheckBox.IndexOf(evento), double.Parse(row[3].ToString()), double.Parse(row[4].ToString()));
                             }
                         }
                     }
-
-                }
-                
+                }                
             }
-
-
         }
 
-        private void GuardarPunto(DateTime FechaHora, Evento miIcono, double posicion)
+        private void GuardarPunto(DateTime FechaHora, Evento unEvento, double posicion,double dblLatitud, double dblLonguitud)
         {
 
             switch (posicion)
@@ -329,14 +331,8 @@ namespace _1._2_Grafica_de_Tiempos
             double tmInicia = FechaHora.Minute;
             tmHora = Convert.ToInt32(((tmHora * 30) + 30) * intResolucion + posicion * intResolucion + 30);
             tmInicia = (tmInicia * 30 / 5 + 30) * intResolucion + 30;
-            lstIconos.Add(new Icono(tmHora, Convert.ToInt32(tmInicia), miIcono, FechaHora, ""));
+            lstIconos.Add(new Icono(tmHora, Convert.ToInt32(tmInicia), unEvento, FechaHora, "",dblLonguitud,dblLatitud));
 
-
-            Graphics g = tpgLienzo1.CreateGraphics();
-
-            g.FillRectangle(miIcono.ColorRelleno, new Rectangle(tmHora, Convert.ToInt32(tmInicia), Convert.ToInt32(7 * intResolucion), Convert.ToInt32(7 * intResolucion)));
-            g.DrawRectangle(new Pen(Color.Gray), tmHora, Convert.ToInt32(tmInicia), Convert.ToInt32(7 * intResolucion), Convert.ToInt32(7 * intResolucion));
-            g.DrawString(miIcono.Etiqueta, new Font("Arial", Convert.ToInt32(miIcono.TamanoLetra * intResolucion)), miIcono.ColorLetra, tmHora, Convert.ToInt32(tmInicia));
 
         }
 
@@ -406,7 +402,7 @@ namespace _1._2_Grafica_de_Tiempos
         {
             List<string> lstTemp  = new List<string>();
             lstTemp = lstEventosCheckBox;
-            if (!chbMostrarTodo.Checked)
+            if (!chbMostrarTodo.Checked )
             {
                 for (int i = clbEventos.Items.Count - 1; i >= 0; i--)
                 {
@@ -466,7 +462,7 @@ namespace _1._2_Grafica_de_Tiempos
 
         private void tabPage1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = tpgLienzo1.CreateGraphics();
+            Graphics g = tpgGrafica24.CreateGraphics();
             Pen selPen = new Pen(Color.Black);
             int intRY = Convert.ToInt32(390 * intResolucion);
             int intRX = Convert.ToInt32(750 * intResolucion);
@@ -518,14 +514,13 @@ namespace _1._2_Grafica_de_Tiempos
 
         private void tpgLienzo1_Click(object sender, EventArgs e)
         {
-
             dtgTabla.DataSource = dtDia;
             dtgTabla.Update();
             dtgTabla.Refresh();
             string strHoraSelecionada = "";
 
-            int X  = tpgLienzo1.PointToClient(MousePosition).X;
-            int Y = tpgLienzo1.PointToClient(MousePosition).Y;
+            int X  = tpgGrafica24.PointToClient(MousePosition).X;
+            int Y = tpgGrafica24.PointToClient(MousePosition).Y;
             foreach (var miIcono in lstIconos)
             {
                 if (X >= miIcono.X && X <= miIcono.X + Convert.ToInt32(7 * intResolucion))
@@ -554,10 +549,12 @@ namespace _1._2_Grafica_de_Tiempos
                         {
                             if (dtDia.Rows[i]["F11"].ToString().Contains(strHoraSelecionada))
                             {
-                                tbcMenu.SelectTab(1);
+                                tbcMenu.SelectTab(2);
                                 dtgTabla.ClearSelection();
                                 dtgTabla.CurrentCell = dtgTabla.Rows[i].Cells["F11"];
                                 dtgTabla.Rows[i].Selected = true;
+
+
                             }
                         }
 
@@ -584,6 +581,7 @@ namespace _1._2_Grafica_de_Tiempos
             {
                 dtpFinal.Value = dtpInicio.Value;
             }
+
         }
         private void tbpBarras_Scroll(object sender, ScrollEventArgs e)
         {
@@ -655,11 +653,11 @@ namespace _1._2_Grafica_de_Tiempos
             foreach (DataRow row in selectedRows)
             {
                 DateTime dateTime = row.Field<DateTime>("F11");
-                lstLista[0].Add(new Icono(0, 0, null, dateTime, row["F24"].ToString()));
-                lstLista[2].Add(new Icono(0, 0, null, dateTime, row["F23"].ToString()));
-                lstLista[4].Add(new Icono(0, 0, null, dateTime, row["F28"].ToString()));
-                lstLista[5].Add(new Icono(0, 0, null, dateTime, row["F29"].ToString()));
-                lstLista[6].Add(new Icono(0, 0, null, dateTime, row["F25"].ToString()));
+                lstLista[0].Add(new Icono(dateTime, row["F24"].ToString()));
+                lstLista[2].Add(new Icono(dateTime, row["F24"].ToString()));
+                lstLista[4].Add(new Icono(dateTime, row["F24"].ToString()));
+                lstLista[5].Add(new Icono(dateTime, row["F24"].ToString()));
+                lstLista[6].Add(new Icono(dateTime, row["F24"].ToString()));
                 foreach (var evento in clbEventos.Items)
                 {
 
@@ -668,10 +666,10 @@ namespace _1._2_Grafica_de_Tiempos
                     {
 
                         if (row["F14"].ToString() == "024" || row["F14"].ToString() == "076")
-                            lstLista[1].Add(new Icono(0, 0, lstEventos[clbEventos.Items.IndexOf(row["F16"].ToString())], dateTime, row["F14"].ToString()));
+                            lstLista[1].Add(new Icono(lstEventos[clbEventos.Items.IndexOf(row["F16"].ToString())], dateTime, row["F14"].ToString()));
 
                         if (row["F14"].ToString() == "135" || row["F14"].ToString() == "136")
-                            lstLista[3].Add(new Icono(0, 0, lstEventos[clbEventos.Items.IndexOf(row["F16"].ToString())], dateTime, row["F14"].ToString()));
+                            lstLista[3].Add(new Icono(lstEventos[clbEventos.Items.IndexOf(row["F16"].ToString())], dateTime, row["F14"].ToString()));
                     }
 
                 }
@@ -837,7 +835,129 @@ namespace _1._2_Grafica_de_Tiempos
         {
             this.Close();
         }
+        /// <summary>
+        /// Mapa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
+        private void MarcarMapa() {
+            mapControl.Overlays.Clear();
+            foreach (var miIcono in lstIconos)
+            {
+                mapControl.Position = new GMap.NET.PointLatLng(miIcono.Latitud, miIcono.Longitud);
+                mapControl.MinZoom = 5;
+                mapControl.MaxZoom = 100;
 
 
+                mapControl.Zoom = 10;
+
+
+                PointLatLng marca = new PointLatLng(miIcono.Latitud, miIcono.Longitud);
+                GMarkerGoogleType gMarker = new GMarkerGoogleType();
+                //GMapMarker Mmarca = new GMarkerGoogle(marca, new Bitmap(new Rectangle()));
+                Bitmap imagen = null;
+                switch (miIcono.Evento.Codigo)
+                {
+                    case "023":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.orange_dot;
+                        break;
+                    case "110":
+                        imagen = new Bitmap(Properties.Resources.OFF);
+                        gMarker = GMarkerGoogleType.green;
+                        break;
+                    case "109":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.green;
+                        break;
+                    case "250":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.black_small;
+                        break;
+                    case "141":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.red;
+                        break;
+                    case "142":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.blue;
+                        break;
+                    case "025":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.pink;
+                        break;
+                    case "038":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.lightblue;
+                        break;
+                    case "037":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.purple;
+                        break;
+                    case "132":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.green_big_go;
+                        break;
+                    case "024":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.green_pushpin;
+                        break;
+                    case "076":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.yellow;
+                        break;
+                    case "135":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.purple_pushpin;
+                        break;
+                    case "136":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.lightblue_pushpin;
+                        break;
+                    case "204":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.red_dot;
+                        break;
+                    case "005":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.red_dot;
+                        break;
+                    case "017":
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.red_big_stop;
+                        break;
+                    default:
+                        imagen = new Bitmap(Properties.Resources.Tiempo);
+                        gMarker = GMarkerGoogleType.orange_dot;
+                        break;
+                }
+                GMapMarker Mmarca = new GMarkerGoogle(marca, gMarker);
+                Mmarca.ToolTipText = miIcono.Evento.Titulo + "\n" + miIcono.FechaHora.ToString();
+                M
+                GMapOverlay markers = new GMapOverlay("markers");
+
+                markers.Markers.Add(Mmarca);
+                mapControl.Overlays.Add(markers);
+            }
+        }
+        private void btnMap_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void mapControl_Load(object sender, EventArgs e)
+        {
+            mapControl.ShowCenter = false;
+        }
+
+        private void tbcMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tbcMenu.SelectedIndex == 1)
+            {
+                MarcarMapa();
+            }
+        }
     }
 }

@@ -59,9 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dtgTabla = new System.Windows.Forms.DataGridView();
-            this.tpgLienzo1 = new System.Windows.Forms.TabPage();
+            this.tpgGrafica24 = new System.Windows.Forms.TabPage();
             this.lblScrollF = new System.Windows.Forms.Label();
             this.pnlControl = new System.Windows.Forms.Panel();
             this.btnSiguienteDia = new System.Windows.Forms.Button();
@@ -72,13 +70,20 @@
             this.btnGraficar = new System.Windows.Forms.Button();
             this.clbEventos = new System.Windows.Forms.CheckedListBox();
             this.tbcMenu = new System.Windows.Forms.TabControl();
+            this.tbpMapa = new System.Windows.Forms.TabPage();
+            this.mapControl = new GMap.NET.WindowsForms.GMapControl();
+            this.tbpDatos = new System.Windows.Forms.TabPage();
+            this.dtgTabla = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbpBarras.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).BeginInit();
-            this.tpgLienzo1.SuspendLayout();
+            this.tpgGrafica24.SuspendLayout();
             this.pnlControl.SuspendLayout();
             this.tbcMenu.SuspendLayout();
+            this.tbpMapa.SuspendLayout();
+            this.tbpDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpBarras
@@ -118,7 +123,7 @@
             this.tbpBarras.Location = new System.Drawing.Point(4, 22);
             this.tbpBarras.Name = "tbpBarras";
             this.tbpBarras.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpBarras.Size = new System.Drawing.Size(1205, 771);
+            this.tbpBarras.Size = new System.Drawing.Size(958, 771);
             this.tbpBarras.TabIndex = 2;
             this.tbpBarras.Text = "Graficas por Fecha";
             this.tbpBarras.Scroll += new System.Windows.Forms.ScrollEventHandler(this.tbpBarras_Scroll);
@@ -129,7 +134,7 @@
             // 
             this.lblSi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSi.AutoSize = true;
-            this.lblSi.Location = new System.Drawing.Point(315, 35);
+            this.lblSi.Location = new System.Drawing.Point(68, 35);
             this.lblSi.Name = "lblSi";
             this.lblSi.Size = new System.Drawing.Size(25, 13);
             this.lblSi.TabIndex = 17;
@@ -139,7 +144,7 @@
             // 
             this.lblOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOff.AutoSize = true;
-            this.lblOff.Location = new System.Drawing.Point(250, 35);
+            this.lblOff.Location = new System.Drawing.Point(3, 35);
             this.lblOff.Name = "lblOff";
             this.lblOff.Size = new System.Drawing.Size(30, 13);
             this.lblOff.TabIndex = 16;
@@ -149,7 +154,7 @@
             // 
             this.lblOn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblOn.AutoSize = true;
-            this.lblOn.Location = new System.Drawing.Point(185, 35);
+            this.lblOn.Location = new System.Drawing.Point(-62, 35);
             this.lblOn.Name = "lblOn";
             this.lblOn.Size = new System.Drawing.Size(26, 13);
             this.lblOn.TabIndex = 15;
@@ -167,7 +172,7 @@
             // 
             this.btnBuscarEntreFechas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarEntreFechas.Enabled = false;
-            this.btnBuscarEntreFechas.Location = new System.Drawing.Point(1082, 34);
+            this.btnBuscarEntreFechas.Location = new System.Drawing.Point(835, 34);
             this.btnBuscarEntreFechas.Name = "btnBuscarEntreFechas";
             this.btnBuscarEntreFechas.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarEntreFechas.TabIndex = 13;
@@ -197,7 +202,7 @@
             // 
             this.lblFinalG.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFinalG.AutoSize = true;
-            this.lblFinalG.Location = new System.Drawing.Point(1089, 700);
+            this.lblFinalG.Location = new System.Drawing.Point(842, 700);
             this.lblFinalG.Name = "lblFinalG";
             this.lblFinalG.Size = new System.Drawing.Size(70, 13);
             this.lblFinalG.TabIndex = 11;
@@ -207,7 +212,7 @@
             // 
             this.lblFinalF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFinalF.AutoSize = true;
-            this.lblFinalF.Location = new System.Drawing.Point(1089, 600);
+            this.lblFinalF.Location = new System.Drawing.Point(842, 600);
             this.lblFinalF.Name = "lblFinalF";
             this.lblFinalF.Size = new System.Drawing.Size(70, 13);
             this.lblFinalF.TabIndex = 11;
@@ -226,7 +231,7 @@
             // 
             this.lblFinalE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFinalE.AutoSize = true;
-            this.lblFinalE.Location = new System.Drawing.Point(1089, 500);
+            this.lblFinalE.Location = new System.Drawing.Point(842, 500);
             this.lblFinalE.Name = "lblFinalE";
             this.lblFinalE.Size = new System.Drawing.Size(70, 13);
             this.lblFinalE.TabIndex = 11;
@@ -245,7 +250,7 @@
             // 
             this.lblFinalD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFinalD.AutoSize = true;
-            this.lblFinalD.Location = new System.Drawing.Point(1089, 400);
+            this.lblFinalD.Location = new System.Drawing.Point(842, 400);
             this.lblFinalD.Name = "lblFinalD";
             this.lblFinalD.Size = new System.Drawing.Size(70, 13);
             this.lblFinalD.TabIndex = 11;
@@ -264,7 +269,7 @@
             // 
             this.lblFinalC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFinalC.AutoSize = true;
-            this.lblFinalC.Location = new System.Drawing.Point(1089, 300);
+            this.lblFinalC.Location = new System.Drawing.Point(842, 300);
             this.lblFinalC.Name = "lblFinalC";
             this.lblFinalC.Size = new System.Drawing.Size(70, 13);
             this.lblFinalC.TabIndex = 11;
@@ -283,7 +288,7 @@
             // 
             this.lblFinalB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFinalB.AutoSize = true;
-            this.lblFinalB.Location = new System.Drawing.Point(1089, 200);
+            this.lblFinalB.Location = new System.Drawing.Point(842, 200);
             this.lblFinalB.Name = "lblFinalB";
             this.lblFinalB.Size = new System.Drawing.Size(70, 13);
             this.lblFinalB.TabIndex = 11;
@@ -302,7 +307,7 @@
             // 
             this.lblFinalA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFinalA.AutoSize = true;
-            this.lblFinalA.Location = new System.Drawing.Point(1089, 100);
+            this.lblFinalA.Location = new System.Drawing.Point(842, 100);
             this.lblFinalA.Name = "lblFinalA";
             this.lblFinalA.Size = new System.Drawing.Size(70, 13);
             this.lblFinalA.TabIndex = 11;
@@ -312,7 +317,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(741, 38);
+            this.label9.Location = new System.Drawing.Point(494, 38);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 13);
             this.label9.TabIndex = 10;
@@ -322,7 +327,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(435, 35);
+            this.label5.Location = new System.Drawing.Point(188, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 9;
@@ -332,7 +337,7 @@
             // 
             this.dtpFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFinal.Enabled = false;
-            this.dtpFinal.Location = new System.Drawing.Point(806, 34);
+            this.dtpFinal.Location = new System.Drawing.Point(559, 34);
             this.dtpFinal.Name = "dtpFinal";
             this.dtpFinal.Size = new System.Drawing.Size(200, 20);
             this.dtpFinal.TabIndex = 8;
@@ -342,7 +347,7 @@
             // 
             this.dtpInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpInicio.Enabled = false;
-            this.dtpInicio.Location = new System.Drawing.Point(485, 31);
+            this.dtpInicio.Location = new System.Drawing.Point(238, 31);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.Size = new System.Drawing.Size(200, 20);
             this.dtpInicio.TabIndex = 7;
@@ -411,44 +416,20 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Operación de la maquinaria";
             // 
-            // tabPage2
+            // tpgGrafica24
             // 
-            this.tabPage2.Controls.Add(this.dtgTabla);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1205, 771);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Datos";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dtgTabla
-            // 
-            this.dtgTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgTabla.Location = new System.Drawing.Point(0, 0);
-            this.dtgTabla.Name = "dtgTabla";
-            this.dtgTabla.Size = new System.Drawing.Size(1876, 821);
-            this.dtgTabla.TabIndex = 5;
-            this.dtgTabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgTabla_CellContentClick);
-            // 
-            // tpgLienzo1
-            // 
-            this.tpgLienzo1.AutoScroll = true;
-            this.tpgLienzo1.BackColor = System.Drawing.Color.White;
-            this.tpgLienzo1.Controls.Add(this.lblScrollF);
-            this.tpgLienzo1.Controls.Add(this.pnlControl);
-            this.tpgLienzo1.Location = new System.Drawing.Point(4, 22);
-            this.tpgLienzo1.Name = "tpgLienzo1";
-            this.tpgLienzo1.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgLienzo1.Size = new System.Drawing.Size(1205, 771);
-            this.tpgLienzo1.TabIndex = 0;
-            this.tpgLienzo1.Text = "Grafica 24 Horas";
-            this.tpgLienzo1.Click += new System.EventHandler(this.tpgLienzo1_Click);
-            this.tpgLienzo1.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage1_Paint);
-            this.tpgLienzo1.Resize += new System.EventHandler(this.tpgLienzo1_Resize);
+            this.tpgGrafica24.AutoScroll = true;
+            this.tpgGrafica24.BackColor = System.Drawing.Color.White;
+            this.tpgGrafica24.Controls.Add(this.lblScrollF);
+            this.tpgGrafica24.Location = new System.Drawing.Point(4, 22);
+            this.tpgGrafica24.Name = "tpgGrafica24";
+            this.tpgGrafica24.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgGrafica24.Size = new System.Drawing.Size(958, 771);
+            this.tpgGrafica24.TabIndex = 0;
+            this.tpgGrafica24.Text = "Grafica 24 Horas";
+            this.tpgGrafica24.Click += new System.EventHandler(this.tpgLienzo1_Click);
+            this.tpgGrafica24.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage1_Paint);
+            this.tpgGrafica24.Resize += new System.EventHandler(this.tpgLienzo1_Resize);
             // 
             // lblScrollF
             // 
@@ -468,7 +449,7 @@
             this.pnlControl.Controls.Add(this.dtpSelector);
             this.pnlControl.Controls.Add(this.btnGraficar);
             this.pnlControl.Controls.Add(this.clbEventos);
-            this.pnlControl.Location = new System.Drawing.Point(953, 20);
+            this.pnlControl.Location = new System.Drawing.Point(984, 46);
             this.pnlControl.Name = "pnlControl";
             this.pnlControl.Size = new System.Drawing.Size(241, 577);
             this.pnlControl.TabIndex = 26;
@@ -558,14 +539,79 @@
             this.tbcMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbcMenu.Controls.Add(this.tpgLienzo1);
-            this.tbcMenu.Controls.Add(this.tabPage2);
+            this.tbcMenu.Controls.Add(this.tpgGrafica24);
+            this.tbcMenu.Controls.Add(this.tbpMapa);
+            this.tbcMenu.Controls.Add(this.tbpDatos);
             this.tbcMenu.Controls.Add(this.tbpBarras);
             this.tbcMenu.Location = new System.Drawing.Point(12, 24);
             this.tbcMenu.Name = "tbcMenu";
             this.tbcMenu.SelectedIndex = 0;
-            this.tbcMenu.Size = new System.Drawing.Size(1213, 797);
+            this.tbcMenu.Size = new System.Drawing.Size(966, 797);
             this.tbcMenu.TabIndex = 27;
+            this.tbcMenu.SelectedIndexChanged += new System.EventHandler(this.tbcMenu_SelectedIndexChanged);
+            // 
+            // tbpMapa
+            // 
+            this.tbpMapa.Controls.Add(this.mapControl);
+            this.tbpMapa.Location = new System.Drawing.Point(4, 22);
+            this.tbpMapa.Name = "tbpMapa";
+            this.tbpMapa.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpMapa.Size = new System.Drawing.Size(958, 771);
+            this.tbpMapa.TabIndex = 3;
+            this.tbpMapa.Text = "Mapa";
+            this.tbpMapa.UseVisualStyleBackColor = true;
+            // 
+            // mapControl
+            // 
+            this.mapControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mapControl.Bearing = 0F;
+            this.mapControl.CanDragMap = true;
+            this.mapControl.EmptyTileColor = System.Drawing.Color.Navy;
+            this.mapControl.GrayScaleMode = false;
+            this.mapControl.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
+            this.mapControl.LevelsKeepInMemory = 5;
+            this.mapControl.Location = new System.Drawing.Point(0, 3);
+            this.mapControl.MarkersEnabled = true;
+            this.mapControl.MaxZoom = 2;
+            this.mapControl.MinZoom = 2;
+            this.mapControl.MouseWheelZoomEnabled = true;
+            this.mapControl.MouseWheelZoomType = GMap.NET.MouseWheelZoomType.MousePositionAndCenter;
+            this.mapControl.Name = "mapControl";
+            this.mapControl.NegativeMode = false;
+            this.mapControl.PolygonsEnabled = true;
+            this.mapControl.RetryLoadTile = 0;
+            this.mapControl.RoutesEnabled = true;
+            this.mapControl.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
+            this.mapControl.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
+            this.mapControl.ShowTileGridLines = false;
+            this.mapControl.Size = new System.Drawing.Size(955, 749);
+            this.mapControl.TabIndex = 28;
+            this.mapControl.Zoom = 0D;
+            this.mapControl.Load += new System.EventHandler(this.mapControl_Load);
+            // 
+            // tbpDatos
+            // 
+            this.tbpDatos.Controls.Add(this.dtgTabla);
+            this.tbpDatos.Location = new System.Drawing.Point(4, 22);
+            this.tbpDatos.Name = "tbpDatos";
+            this.tbpDatos.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpDatos.Size = new System.Drawing.Size(958, 771);
+            this.tbpDatos.TabIndex = 4;
+            this.tbpDatos.Text = "Datos";
+            this.tbpDatos.UseVisualStyleBackColor = true;
+            // 
+            // dtgTabla
+            // 
+            this.dtgTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgTabla.Location = new System.Drawing.Point(3, 3);
+            this.dtgTabla.Name = "dtgTabla";
+            this.dtgTabla.Size = new System.Drawing.Size(949, 762);
+            this.dtgTabla.TabIndex = 7;
             // 
             // btnCargar
             // 
@@ -578,6 +624,16 @@
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::_1._2_Grafica_de_Tiempos.Properties.Resources.OFF;
+            this.pictureBox1.Location = new System.Drawing.Point(989, 647);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,18 +641,22 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(1237, 833);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.tbcMenu);
             this.Name = "frmVista";
             this.tbpBarras.ResumeLayout(false);
             this.tbpBarras.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).EndInit();
-            this.tpgLienzo1.ResumeLayout(false);
-            this.tpgLienzo1.PerformLayout();
+            this.tpgGrafica24.ResumeLayout(false);
+            this.tpgGrafica24.PerformLayout();
             this.pnlControl.ResumeLayout(false);
             this.pnlControl.PerformLayout();
             this.tbcMenu.ResumeLayout(false);
+            this.tbpMapa.ResumeLayout(false);
+            this.tbpDatos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,9 +690,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dtgTabla;
-        private System.Windows.Forms.TabPage tpgLienzo1;
+        private System.Windows.Forms.TabPage tpgGrafica24;
         private System.Windows.Forms.Label lblScrollF;
         private System.Windows.Forms.Panel pnlControl;
         private System.Windows.Forms.RichTextBox txtEventos;
@@ -647,6 +705,11 @@
         private System.Windows.Forms.CheckBox chbMostrarTodo;
         private System.Windows.Forms.Button btnSiguienteDia;
         private System.Windows.Forms.Button btnAnteriorDia;
+        private System.Windows.Forms.TabPage tbpMapa;
+        private System.Windows.Forms.TabPage tbpDatos;
+        private System.Windows.Forms.DataGridView dtgTabla;
+        private GMap.NET.WindowsForms.GMapControl mapControl;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
