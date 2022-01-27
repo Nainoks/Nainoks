@@ -79,9 +79,8 @@ namespace _1._4___COM
             }
 
             var watcher = new ManagementEventWatcher();
-            var query = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
             watcher.EventArrived += new EventArrivedEventHandler(watcher_EventArrived);
-            watcher.Query = query;
+            watcher.Query = new WqlEventQuery("SELECT * FROM Win32_DeviceChangeEvent WHERE EventType = 2");
             watcher.Start();
         }
 
