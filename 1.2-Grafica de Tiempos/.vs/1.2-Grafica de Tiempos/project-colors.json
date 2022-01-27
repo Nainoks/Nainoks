@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "106ae8e8-eafc-472b-9c25-114f224ebe88": {
+      "ProjectGuid": "106ae8e8-eafc-472b-9c25-114f224ebe88",
+      "DisplayName": "1.2-Grafica de Tiempos",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

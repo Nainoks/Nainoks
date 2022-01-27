@@ -1,0 +1,11 @@
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\bin\x64\Debug\1.2-Grafica de Tiempos.exe.config
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\bin\x64\Debug\1.2-Grafica de Tiempos.exe
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\bin\x64\Debug\1.2-Grafica de Tiempos.pdb
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\1.2-Grafica de Tiempos.csproj.SuggestedBindingRedirects.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\_1._2_Grafica_de_Tiempos.frmVista.resources
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\_1._2_Grafica_de_Tiempos.Properties.Resources.resources
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\1.2-Grafica de Tiempos.csproj.GenerateResource.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\1.2-Grafica de Tiempos.csproj.CoreCompileInputs.cache
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\1.2-Grafica de Tiempos.exe
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\1.2-Grafica de Tiempos.pdb
+C:\Users\bti_s\Desktop\Proyectos\3 M\1.2-Grafica de Tiempos\1.2-Grafica de Tiempos\obj\x64\Debug\1.2-Grafica de Tiempos.csproj.AssemblyReference.cache
