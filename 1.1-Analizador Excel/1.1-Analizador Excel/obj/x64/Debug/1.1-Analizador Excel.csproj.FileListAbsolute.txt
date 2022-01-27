@@ -9,3 +9,15 @@ C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\o
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.csproj.CoreCompileInputs.cache
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.exe
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.pdb
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\bin\x64\Debug\1.1-Analizador Excel.exe.config
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\bin\x64\Debug\1.1-Analizador Excel.exe
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\bin\x64\Debug\1.1-Analizador Excel.pdb
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.csproj.AssemblyReference.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.csproj.SuggestedBindingRedirects.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\_1._1_Analizador_Excel.frmVista.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\_1._1_Analizador_Excel.Properties.Resources.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.csproj.GenerateResource.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.csproj.CoreCompileInputs.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.exe
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\1.1-Analizador Excel.pdb
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.1-Analizador Excel\1.1-Analizador Excel\obj\x64\Debug\_1._1_Analizador_Excel.Version.resources

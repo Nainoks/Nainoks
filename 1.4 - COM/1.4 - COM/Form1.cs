@@ -451,5 +451,16 @@ namespace _1._4___COM
         {
             tssEco.Checked = !tssEco.Checked;
         }
+
+        private void versionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVersion frmVersion = new frmVersion();
+            frmVersion.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

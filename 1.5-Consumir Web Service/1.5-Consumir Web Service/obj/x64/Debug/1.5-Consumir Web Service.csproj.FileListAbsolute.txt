@@ -18,3 +18,47 @@ C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web S
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\DocumentFormat.OpenXml.xml
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ExcelNumberFormat.xml
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.CopyComplete
+<<<<<<< HEAD
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\1.5-Consumir Web Service.exe.config
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\1.5-Consumir Web Service.exe
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\1.5-Consumir Web Service.pdb
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ClosedXML.dll
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\DocumentFormat.OpenXml.dll
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ExcelNumberFormat.dll
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\System.IO.Packaging.dll
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ClosedXML.pdb
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ClosedXML.xml
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\DocumentFormat.OpenXml.xml
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ExcelNumberFormat.xml
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.AssemblyReference.cache
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.SuggestedBindingRedirects.cache
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\_1._5_Consumir_Web_Service.frmVista.resources
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\_1._5_Consumir_Web_Service.Properties.Resources.resources
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.GenerateResource.cache
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.CoreCompileInputs.cache
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.CopyComplete
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.exe
+C:\Users\bti_s\Source\Repos\Nainoks\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.pdb
+=======
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\1.5-Consumir Web Service.exe.config
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\1.5-Consumir Web Service.exe
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\1.5-Consumir Web Service.pdb
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ClosedXML.dll
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\DocumentFormat.OpenXml.dll
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ExcelNumberFormat.dll
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\System.IO.Packaging.dll
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ClosedXML.pdb
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ClosedXML.xml
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\DocumentFormat.OpenXml.xml
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\bin\x64\Debug\ExcelNumberFormat.xml
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.AssemblyReference.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.SuggestedBindingRedirects.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\_1._5_Consumir_Web_Service.frmVista.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\_1._5_Consumir_Web_Service.frmVersion.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\_1._5_Consumir_Web_Service.Properties.Resources.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.GenerateResource.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.CoreCompileInputs.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.csproj.CopyComplete
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.exe
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.5-Consumir Web Service\1.5-Consumir Web Service\obj\x64\Debug\1.5-Consumir Web Service.pdb
+>>>>>>> 312927d1c544f3b65b48ef1cf40d5cd06327bad6

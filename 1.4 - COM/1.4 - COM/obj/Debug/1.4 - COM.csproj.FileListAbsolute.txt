@@ -10,3 +10,16 @@ C:\Users\bti_s\Desktop\Proyectos\3 M\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.exe
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.pdb
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.4 - COM\1.4 - COM\obj\Debug\_1._4___COM.frmGeneral.resources
 C:\Users\bti_s\Desktop\Proyectos\3 M\1.4 - COM\1.4 - COM\obj\Debug\_1._4___COM.frmCom.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\bin\Debug\1.4 - COM.exe.config
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\bin\Debug\1.4 - COM.exe
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\bin\Debug\1.4 - COM.pdb
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.csproj.AssemblyReference.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.csproj.SuggestedBindingRedirects.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\_1._4___COM.frmGeneral.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\_1._4___COM.frmCom.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\_1._4___COM.Properties.Resources.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\_1._4___COM.frmVersion.resources
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.csproj.GenerateResource.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.csproj.CoreCompileInputs.cache
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.exe
+C:\Users\bti_s\Desktop\GitHub\BosonTI\1.4 - COM\1.4 - COM\obj\Debug\1.4 - COM.pdb

@@ -73,20 +73,26 @@
             this.infoLastPositionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAbrir = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.versiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgWeb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoLastPositionBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGet
             // 
             this.btnGet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGet.Location = new System.Drawing.Point(610, 34);
+            this.btnGet.Location = new System.Drawing.Point(610, 56);
             this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(138, 88);
+            this.btnGet.Size = new System.Drawing.Size(138, 84);
             this.btnGet.TabIndex = 0;
             this.btnGet.Text = "GET";
             this.btnGet.UseVisualStyleBackColor = true;
@@ -327,10 +333,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 32);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(562, 286);
+            this.tabControl1.Size = new System.Drawing.Size(562, 269);
             this.tabControl1.TabIndex = 25;
             // 
             // tabPage1
@@ -362,7 +368,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(554, 260);
+            this.tabPage1.Size = new System.Drawing.Size(554, 243);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -373,7 +379,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(554, 260);
+            this.tabPage2.Size = new System.Drawing.Size(554, 243);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -486,9 +492,9 @@
             this.btnAbrir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAbrir.Enabled = false;
-            this.btnAbrir.Location = new System.Drawing.Point(610, 135);
+            this.btnAbrir.Location = new System.Drawing.Point(610, 146);
             this.btnAbrir.Name = "btnAbrir";
-            this.btnAbrir.Size = new System.Drawing.Size(138, 88);
+            this.btnAbrir.Size = new System.Drawing.Size(138, 82);
             this.btnAbrir.TabIndex = 26;
             this.btnAbrir.Text = "Guardar";
             this.btnAbrir.UseVisualStyleBackColor = true;
@@ -499,23 +505,66 @@
             this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCrear.Enabled = false;
-            this.btnCrear.Location = new System.Drawing.Point(610, 245);
+            this.btnCrear.Location = new System.Drawing.Point(610, 237);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(138, 49);
+            this.btnCrear.Size = new System.Drawing.Size(138, 60);
             this.btnCrear.TabIndex = 27;
             this.btnCrear.Text = "Guardar Como";
             this.btnCrear.UseVisualStyleBackColor = true;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(778, 24);
+            this.menuStrip1.TabIndex = 28;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.versiónToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // versiónToolStripMenuItem
+            // 
+            this.versiónToolStripMenuItem.Name = "versiónToolStripMenuItem";
+            this.versiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.versiónToolStripMenuItem.Text = "Versión";
+            this.versiónToolStripMenuItem.Click += new System.EventHandler(this.versiónToolStripMenuItem_Click);
+            // 
             // frmVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 308);
+            this.ClientSize = new System.Drawing.Size(778, 331);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.btnAbrir);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnGet);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmVista";
             this.Text = "Last Position 1";
             this.Load += new System.EventHandler(this.frmVista_Load);
@@ -525,7 +574,10 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgWeb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoLastPositionBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -575,6 +627,11 @@
         private System.Windows.Forms.BindingSource infoLastPositionBindingSource;
         private System.Windows.Forms.Button btnAbrir;
         private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem versiónToolStripMenuItem;
     }
 }
 

@@ -133,5 +133,26 @@ namespace _1._1_Analizador_Excel
             }
             MessageBox.Show(String.Format("La velocidad maxima alcanzada es de {0} km/h ",dblMayor));
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void versiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Version version = new Version();
+            version.ShowDialog();
+        }
     }
 }

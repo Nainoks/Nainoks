@@ -933,8 +933,7 @@ namespace _1._2_Grafica_de_Tiempos
                         break;
                 }
                 GMapMarker Mmarca = new GMarkerGoogle(marca, gMarker);
-                Mmarca.ToolTipText = miIcono.Evento.Titulo + "\n" + miIcono.FechaHora.ToString();
-                M
+                Mmarca.ToolTipText = miIcono.Evento.Titulo + "\n" + miIcono.FechaHora.ToString(); 
                 GMapOverlay markers = new GMapOverlay("markers");
 
                 markers.Markers.Add(Mmarca);
@@ -958,6 +957,17 @@ namespace _1._2_Grafica_de_Tiempos
             {
                 MarcarMapa();
             }
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void versiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVersion frmVersion = new frmVersion();
+            frmVersion.ShowDialog();
         }
     }
 }

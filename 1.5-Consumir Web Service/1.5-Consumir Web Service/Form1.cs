@@ -331,6 +331,17 @@ namespace _1._5_Consumir_Web_Service
             }
 
         }
+
+        private void versiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVersion frmVersion = new frmVersion();
+            frmVersion.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

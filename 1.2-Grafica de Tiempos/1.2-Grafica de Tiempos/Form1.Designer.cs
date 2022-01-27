@@ -76,6 +76,11 @@
             this.dtgTabla = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.versiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbpBarras.SuspendLayout();
             this.tpgGrafica24.SuspendLayout();
             this.pnlControl.SuspendLayout();
@@ -84,6 +89,7 @@
             this.tbpDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbpBarras
@@ -424,7 +430,7 @@
             this.tpgGrafica24.Location = new System.Drawing.Point(4, 22);
             this.tpgGrafica24.Name = "tpgGrafica24";
             this.tpgGrafica24.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgGrafica24.Size = new System.Drawing.Size(958, 771);
+            this.tpgGrafica24.Size = new System.Drawing.Size(958, 770);
             this.tpgGrafica24.TabIndex = 0;
             this.tpgGrafica24.Text = "Grafica 24 Horas";
             this.tpgGrafica24.Click += new System.EventHandler(this.tpgLienzo1_Click);
@@ -449,7 +455,7 @@
             this.pnlControl.Controls.Add(this.dtpSelector);
             this.pnlControl.Controls.Add(this.btnGraficar);
             this.pnlControl.Controls.Add(this.clbEventos);
-            this.pnlControl.Location = new System.Drawing.Point(984, 46);
+            this.pnlControl.Location = new System.Drawing.Point(984, 63);
             this.pnlControl.Name = "pnlControl";
             this.pnlControl.Size = new System.Drawing.Size(241, 577);
             this.pnlControl.TabIndex = 26;
@@ -543,10 +549,10 @@
             this.tbcMenu.Controls.Add(this.tbpMapa);
             this.tbcMenu.Controls.Add(this.tbpDatos);
             this.tbcMenu.Controls.Add(this.tbpBarras);
-            this.tbcMenu.Location = new System.Drawing.Point(12, 24);
+            this.tbcMenu.Location = new System.Drawing.Point(12, 41);
             this.tbcMenu.Name = "tbcMenu";
             this.tbcMenu.SelectedIndex = 0;
-            this.tbcMenu.Size = new System.Drawing.Size(966, 797);
+            this.tbcMenu.Size = new System.Drawing.Size(966, 796);
             this.tbcMenu.TabIndex = 27;
             this.tbcMenu.SelectedIndexChanged += new System.EventHandler(this.tbcMenu_SelectedIndexChanged);
             // 
@@ -616,7 +622,7 @@
             // btnCargar
             // 
             this.btnCargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCargar.Location = new System.Drawing.Point(1135, 21);
+            this.btnCargar.Location = new System.Drawing.Point(1135, 37);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(75, 23);
             this.btnCargar.TabIndex = 6;
@@ -628,11 +634,52 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::_1._2_Grafica_de_Tiempos.Properties.Resources.OFF;
-            this.pictureBox1.Location = new System.Drawing.Point(989, 647);
+            this.pictureBox1.Location = new System.Drawing.Point(989, 691);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1237, 24);
+            this.menuStrip1.TabIndex = 29;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.versiónToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // versiónToolStripMenuItem
+            // 
+            this.versiónToolStripMenuItem.Name = "versiónToolStripMenuItem";
+            this.versiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.versiónToolStripMenuItem.Text = "Versión";
+            this.versiónToolStripMenuItem.Click += new System.EventHandler(this.versiónToolStripMenuItem_Click);
             // 
             // frmVista
             // 
@@ -640,11 +687,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(1237, 833);
+            this.ClientSize = new System.Drawing.Size(1237, 860);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.tbcMenu);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmVista";
             this.tbpBarras.ResumeLayout(false);
             this.tbpBarras.PerformLayout();
@@ -657,7 +706,10 @@
             this.tbpDatos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTabla)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -710,6 +762,11 @@
         private System.Windows.Forms.DataGridView dtgTabla;
         private GMap.NET.WindowsForms.GMapControl mapControl;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem versiónToolStripMenuItem;
     }
 }
 

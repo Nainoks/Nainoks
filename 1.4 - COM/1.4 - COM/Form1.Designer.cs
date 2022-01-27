@@ -33,28 +33,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.tssEco = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssPuerto = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssConexion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.luzRojaCd = new System.Windows.Forms.ToolStripStatusLabel();
-            this.luzRojaCts = new System.Windows.Forms.ToolStripStatusLabel();
-            this.luzRojaDsr = new System.Windows.Forms.ToolStripStatusLabel();
-            this.luzRojaRts = new System.Windows.Forms.ToolStripStatusLabel();
-            this.luzRojaDtr = new System.Windows.Forms.ToolStripStatusLabel();
-            this.luzVerde = new System.Windows.Forms.ToolStripStatusLabel();
-            this.luzAzul = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtPantalla = new System.Windows.Forms.RichTextBox();
             this.txtComando = new System.Windows.Forms.TextBox();
             this.btnIngresarComando = new System.Windows.Forms.Button();
             this.serialPortF = new System.IO.Ports.SerialPort(this.components);
-            this.btnDetener = new System.Windows.Forms.Button();
-            this.btnGrabar = new System.Windows.Forms.Button();
-            this.btnPausar = new System.Windows.Forms.Button();
-            this.btnComenzar = new System.Windows.Forms.Button();
-            this.btnCortar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnCopiar = new System.Windows.Forms.Button();
             this.tmrEntrada = new System.Windows.Forms.Timer(this.components);
             this.txtComandoI = new System.Windows.Forms.TextBox();
             this.txtComandoF = new System.Windows.Forms.TextBox();
@@ -62,7 +49,24 @@
             this.btnNewLine = new System.Windows.Forms.CheckBox();
             this.btnHex = new System.Windows.Forms.CheckBox();
             this.btn = new System.Windows.Forms.CheckBox();
-            this.tssEco = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDetener = new System.Windows.Forms.Button();
+            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnPausar = new System.Windows.Forms.Button();
+            this.btnComenzar = new System.Windows.Forms.Button();
+            this.btnCortar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnCopiar = new System.Windows.Forms.Button();
+            this.luzRojaCd = new System.Windows.Forms.ToolStripStatusLabel();
+            this.luzRojaCts = new System.Windows.Forms.ToolStripStatusLabel();
+            this.luzRojaDsr = new System.Windows.Forms.ToolStripStatusLabel();
+            this.luzRojaRts = new System.Windows.Forms.ToolStripStatusLabel();
+            this.luzRojaDtr = new System.Windows.Forms.ToolStripStatusLabel();
+            this.luzVerde = new System.Windows.Forms.ToolStripStatusLabel();
+            this.luzAzul = new System.Windows.Forms.ToolStripStatusLabel();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.versionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +74,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesToolStripMenuItem});
+            this.archivoToolStripMenuItem,
+            this.opcionesToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1198, 24);
@@ -92,6 +98,13 @@
             this.tsmiOpciones.Size = new System.Drawing.Size(180, 22);
             this.tsmiOpciones.Text = "Configurar COMM";
             this.tsmiOpciones.Click += new System.EventHandler(this.tsmiOpciones_Click);
+            // 
+            // tssEco
+            // 
+            this.tssEco.Name = "tssEco";
+            this.tssEco.Size = new System.Drawing.Size(180, 22);
+            this.tssEco.Text = "Activar Echo";
+            this.tssEco.Click += new System.EventHandler(this.tssEco_Click);
             // 
             // statusStrip1
             // 
@@ -135,62 +148,6 @@
             this.tssConexion.Size = new System.Drawing.Size(49, 17);
             this.tssConexion.Text = "Cerrado";
             // 
-            // luzRojaCd
-            // 
-            this.luzRojaCd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaCd.BackgroundImage")));
-            this.luzRojaCd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.luzRojaCd.Name = "luzRojaCd";
-            this.luzRojaCd.Size = new System.Drawing.Size(16, 17);
-            this.luzRojaCd.Text = "   ";
-            // 
-            // luzRojaCts
-            // 
-            this.luzRojaCts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaCts.BackgroundImage")));
-            this.luzRojaCts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.luzRojaCts.Name = "luzRojaCts";
-            this.luzRojaCts.Size = new System.Drawing.Size(16, 17);
-            this.luzRojaCts.Text = "   ";
-            // 
-            // luzRojaDsr
-            // 
-            this.luzRojaDsr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaDsr.BackgroundImage")));
-            this.luzRojaDsr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.luzRojaDsr.Name = "luzRojaDsr";
-            this.luzRojaDsr.Size = new System.Drawing.Size(16, 17);
-            this.luzRojaDsr.Text = "   ";
-            // 
-            // luzRojaRts
-            // 
-            this.luzRojaRts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaRts.BackgroundImage")));
-            this.luzRojaRts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.luzRojaRts.Name = "luzRojaRts";
-            this.luzRojaRts.Size = new System.Drawing.Size(16, 17);
-            this.luzRojaRts.Text = "   ";
-            // 
-            // luzRojaDtr
-            // 
-            this.luzRojaDtr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaDtr.BackgroundImage")));
-            this.luzRojaDtr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.luzRojaDtr.Name = "luzRojaDtr";
-            this.luzRojaDtr.Size = new System.Drawing.Size(16, 17);
-            this.luzRojaDtr.Text = "   ";
-            // 
-            // luzVerde
-            // 
-            this.luzVerde.BackgroundImage = global::_1._4___COM.Properties.Resources.VerdeA;
-            this.luzVerde.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.luzVerde.Name = "luzVerde";
-            this.luzVerde.Size = new System.Drawing.Size(16, 17);
-            this.luzVerde.Text = "   ";
-            // 
-            // luzAzul
-            // 
-            this.luzAzul.BackgroundImage = global::_1._4___COM.Properties.Resources.VerdeA;
-            this.luzAzul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.luzAzul.Name = "luzAzul";
-            this.luzAzul.Size = new System.Drawing.Size(16, 17);
-            this.luzAzul.Text = "   ";
-            // 
             // txtPantalla
             // 
             this.txtPantalla.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -230,6 +187,71 @@
             // serialPortF
             // 
             this.serialPortF.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPortF_DataReceived);
+            // 
+            // tmrEntrada
+            // 
+            this.tmrEntrada.Enabled = true;
+            this.tmrEntrada.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // txtComandoI
+            // 
+            this.txtComandoI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtComandoI.Location = new System.Drawing.Point(12, 510);
+            this.txtComandoI.Name = "txtComandoI";
+            this.txtComandoI.Size = new System.Drawing.Size(134, 20);
+            this.txtComandoI.TabIndex = 25;
+            this.txtComandoI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComandoI_KeyDown);
+            // 
+            // txtComandoF
+            // 
+            this.txtComandoF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtComandoF.Location = new System.Drawing.Point(990, 510);
+            this.txtComandoF.Name = "txtComandoF";
+            this.txtComandoF.Size = new System.Drawing.Size(80, 20);
+            this.txtComandoF.TabIndex = 26;
+            this.txtComandoF.Text = "[0D][0A]";
+            this.txtComandoF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComandoF_KeyDown);
+            // 
+            // tmrSalida
+            // 
+            this.tmrSalida.Enabled = true;
+            this.tmrSalida.Tick += new System.EventHandler(this.tmrSalida_Tick);
+            // 
+            // btnNewLine
+            // 
+            this.btnNewLine.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnNewLine.AutoSize = true;
+            this.btnNewLine.Location = new System.Drawing.Point(250, 30);
+            this.btnNewLine.Name = "btnNewLine";
+            this.btnNewLine.Size = new System.Drawing.Size(25, 23);
+            this.btnNewLine.TabIndex = 27;
+            this.btnNewLine.Text = "\\r";
+            this.btnNewLine.UseVisualStyleBackColor = true;
+            this.btnNewLine.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // btnHex
+            // 
+            this.btnHex.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btnHex.AutoSize = true;
+            this.btnHex.Location = new System.Drawing.Point(281, 30);
+            this.btnHex.Name = "btnHex";
+            this.btnHex.Size = new System.Drawing.Size(25, 23);
+            this.btnHex.TabIndex = 28;
+            this.btnHex.Text = "H";
+            this.btnHex.UseVisualStyleBackColor = true;
+            this.btnHex.CheckedChanged += new System.EventHandler(this.btnHex_CheckedChanged);
+            // 
+            // btn
+            // 
+            this.btn.Appearance = System.Windows.Forms.Appearance.Button;
+            this.btn.AutoSize = true;
+            this.btn.Location = new System.Drawing.Point(219, 30);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(19, 23);
+            this.btn.TabIndex = 29;
+            this.btn.Text = "i";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
             // 
             // btnDetener
             // 
@@ -325,77 +347,91 @@
             this.btnCopiar.UseVisualStyleBackColor = false;
             this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
             // 
-            // tmrEntrada
+            // luzRojaCd
             // 
-            this.tmrEntrada.Enabled = true;
-            this.tmrEntrada.Tick += new System.EventHandler(this.timer_Tick);
+            this.luzRojaCd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaCd.BackgroundImage")));
+            this.luzRojaCd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.luzRojaCd.Name = "luzRojaCd";
+            this.luzRojaCd.Size = new System.Drawing.Size(16, 15);
+            this.luzRojaCd.Text = "   ";
             // 
-            // txtComandoI
+            // luzRojaCts
             // 
-            this.txtComandoI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtComandoI.Location = new System.Drawing.Point(12, 510);
-            this.txtComandoI.Name = "txtComandoI";
-            this.txtComandoI.Size = new System.Drawing.Size(134, 20);
-            this.txtComandoI.TabIndex = 25;
-            this.txtComandoI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComandoI_KeyDown);
+            this.luzRojaCts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaCts.BackgroundImage")));
+            this.luzRojaCts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.luzRojaCts.Name = "luzRojaCts";
+            this.luzRojaCts.Size = new System.Drawing.Size(16, 15);
+            this.luzRojaCts.Text = "   ";
             // 
-            // txtComandoF
+            // luzRojaDsr
             // 
-            this.txtComandoF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtComandoF.Location = new System.Drawing.Point(990, 510);
-            this.txtComandoF.Name = "txtComandoF";
-            this.txtComandoF.Size = new System.Drawing.Size(80, 20);
-            this.txtComandoF.TabIndex = 26;
-            this.txtComandoF.Text = "[0D][0A]";
-            this.txtComandoF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComandoF_KeyDown);
+            this.luzRojaDsr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaDsr.BackgroundImage")));
+            this.luzRojaDsr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.luzRojaDsr.Name = "luzRojaDsr";
+            this.luzRojaDsr.Size = new System.Drawing.Size(16, 15);
+            this.luzRojaDsr.Text = "   ";
             // 
-            // tmrSalida
+            // luzRojaRts
             // 
-            this.tmrSalida.Enabled = true;
-            this.tmrSalida.Tick += new System.EventHandler(this.tmrSalida_Tick);
+            this.luzRojaRts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaRts.BackgroundImage")));
+            this.luzRojaRts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.luzRojaRts.Name = "luzRojaRts";
+            this.luzRojaRts.Size = new System.Drawing.Size(16, 15);
+            this.luzRojaRts.Text = "   ";
             // 
-            // btnNewLine
+            // luzRojaDtr
             // 
-            this.btnNewLine.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnNewLine.AutoSize = true;
-            this.btnNewLine.Location = new System.Drawing.Point(250, 30);
-            this.btnNewLine.Name = "btnNewLine";
-            this.btnNewLine.Size = new System.Drawing.Size(25, 23);
-            this.btnNewLine.TabIndex = 27;
-            this.btnNewLine.Text = "\\r";
-            this.btnNewLine.UseVisualStyleBackColor = true;
-            this.btnNewLine.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.luzRojaDtr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("luzRojaDtr.BackgroundImage")));
+            this.luzRojaDtr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.luzRojaDtr.Name = "luzRojaDtr";
+            this.luzRojaDtr.Size = new System.Drawing.Size(16, 15);
+            this.luzRojaDtr.Text = "   ";
             // 
-            // btnHex
+            // luzVerde
             // 
-            this.btnHex.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btnHex.AutoSize = true;
-            this.btnHex.Location = new System.Drawing.Point(281, 30);
-            this.btnHex.Name = "btnHex";
-            this.btnHex.Size = new System.Drawing.Size(25, 23);
-            this.btnHex.TabIndex = 28;
-            this.btnHex.Text = "H";
-            this.btnHex.UseVisualStyleBackColor = true;
-            this.btnHex.CheckedChanged += new System.EventHandler(this.btnHex_CheckedChanged);
+            this.luzVerde.BackgroundImage = global::_1._4___COM.Properties.Resources.VerdeA;
+            this.luzVerde.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.luzVerde.Name = "luzVerde";
+            this.luzVerde.Size = new System.Drawing.Size(16, 15);
+            this.luzVerde.Text = "   ";
             // 
-            // btn
+            // luzAzul
             // 
-            this.btn.Appearance = System.Windows.Forms.Appearance.Button;
-            this.btn.AutoSize = true;
-            this.btn.Location = new System.Drawing.Point(219, 30);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(19, 23);
-            this.btn.TabIndex = 29;
-            this.btn.Text = "i";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.CheckedChanged += new System.EventHandler(this.btn_CheckedChanged);
+            this.luzAzul.BackgroundImage = global::_1._4___COM.Properties.Resources.VerdeA;
+            this.luzAzul.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.luzAzul.Name = "luzAzul";
+            this.luzAzul.Size = new System.Drawing.Size(16, 15);
+            this.luzAzul.Text = "   ";
             // 
-            // tssEco
+            // archivoToolStripMenuItem
             // 
-            this.tssEco.Name = "tssEco";
-            this.tssEco.Size = new System.Drawing.Size(180, 22);
-            this.tssEco.Text = "Activar Echo";
-            this.tssEco.Click += new System.EventHandler(this.tssEco_Click);
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.versionToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // versionToolStripMenuItem
+            // 
+            this.versionToolStripMenuItem.Name = "versionToolStripMenuItem";
+            this.versionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.versionToolStripMenuItem.Text = "Versión";
+            this.versionToolStripMenuItem.Click += new System.EventHandler(this.versionToolStripMenuItem_Click);
             // 
             // frmGeneral
             // 
@@ -466,6 +502,10 @@
         private System.Windows.Forms.CheckBox btnHex;
         private System.Windows.Forms.CheckBox btn;
         private System.Windows.Forms.ToolStripMenuItem tssEco;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem versionToolStripMenuItem;
     }
 }
 
